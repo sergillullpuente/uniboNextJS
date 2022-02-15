@@ -10,54 +10,40 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://holaunibo.com">Next.js Unibo interview</a>
         </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <a href="/api/posts" className="card">
+            <h3>GET /api/posts &rarr;</h3>
+            <p>Get all posts.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          <a href="/api/posts/30" className="card">
+            <h3>GET /api/post/[postId] &rarr;</h3>
+            <p>Get post by id [30] </p>
           </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <a href="/api/posts/info/30"  className="card">
+            <h3>GET /api/posts/info/[postId] &rarr;</h3>
+            <p>Get post info with comments and user</p>
           </a>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
+          <a className="card" >
+            <h3>POST /api/posts &rarr;</h3>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Create new post with postman
+            </p>
+          </a>
+
+          <a className="card" >
+            <h3>PUT /api/posts/[postId] &rarr;</h3>
+            <p>
+              Update post with postman
             </p>
           </a>
         </div>
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
 
       <style jsx>{`
         .container {
@@ -78,32 +64,13 @@ export default function Home() {
           align-items: center;
         }
 
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
         a {
           color: inherit;
           text-decoration: none;
         }
 
         .title a {
-          color: #0070f3;
+          color: #3DC18B;
           text-decoration: none;
         }
 
@@ -163,8 +130,8 @@ export default function Home() {
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #3DC18B;
+          border-color: #3DC18B;
         }
 
         .card h3 {
